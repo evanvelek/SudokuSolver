@@ -33,10 +33,11 @@ class TestSudokuSolver(unittest.TestCase):
 
 
     def test_sudoku_solver_works_as_a_whole(self):
-        self.assertEqual(solve(0, 0, self._board), [
-            [4, 2, 6, 8, 3, 5, 9, 7, 1],
+        solve(0, 0, self._board)
+        self.assertEqual(self._board, [
+            [4, 2, 6, 8, 3, 5, 9, 1, 7],
             [7, 9, 3, 6, 2, 1, 5, 4, 8],
-            [8, 1, 5, 4, 9, 7, 6, 3, 2],
+            [8, 1, 5, 4, 9, 7, 6, 2, 3],
             [2, 8, 7, 9, 6, 3, 4, 1, 5],
             [6, 4, 9, 1, 5, 2, 3, 8, 7],
             [3, 5, 1, 7, 8, 4, 2, 9, 6],
